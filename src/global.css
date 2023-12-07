@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+}
+
+.app main {
+	flex-grow: 1;
+}
