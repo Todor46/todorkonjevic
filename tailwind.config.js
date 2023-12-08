@@ -10,15 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: [
-          'Young Serif',
-          'ui-serif',
-          'Georgia',
-          'Cambria',
-          'Times New Roman',
-          'Times',
-          'serif',
-        ],
+        caveat: ['Caveat'],
+        titi: ['Titillium Web'],
+        serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
         sans: [
           'Quicksand',
           'system-ui',

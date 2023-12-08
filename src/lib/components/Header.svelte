@@ -18,14 +18,6 @@
 
   let navLinks = [
     {
-      label: 'Home',
-      path: ROUTES.HOME,
-    },
-    {
-      label: 'About',
-      path: ROUTES.ABOUT,
-    },
-    {
       label: 'Portfolio',
       path: ROUTES.PORTFOLIO,
     },
@@ -41,7 +33,8 @@
 </script>
 
 <header class="flex justify-between navbar container max-w-5xl m-auto">
-  <div class="text-2xl text-primary font-serif tracking-wide font-bold">Todor Konjevic</div>
+  <a href={ROUTES.HOME} class="text-4xl text-primary font-caveat tracking-tight font-bold"
+    >Todor Konjevic</a>
   <div class="flex gap-6 items-center justify-center">
     <ul class="flex gap-5 font-medium">
       {#each navLinks as link}
