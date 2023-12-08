@@ -41,7 +41,7 @@
 </script>
 
 <header class="flex justify-between navbar container max-w-5xl m-auto">
-  <div class="text-2xl text-primary font-serif tracking-tight font-bold">Todor Konjevic</div>
+  <div class="text-2xl text-primary font-serif tracking-wide font-bold">Todor Konjevic</div>
   <div class="flex gap-6 items-center justify-center">
     <ul class="flex gap-5 font-medium">
       {#each navLinks as link}
