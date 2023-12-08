@@ -18,8 +18,8 @@
 
   let navLinks = [
     {
-      label: 'Portfolio',
-      path: ROUTES.PORTFOLIO,
+      label: 'Work',
+      path: ROUTES.WORK,
     },
     {
       label: 'Blog',
