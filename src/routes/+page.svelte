@@ -24,13 +24,21 @@
   class="text-center flex-grow text-2xl leading-9 tracking-tight flex justify-center items-center">
   <div class="max-w-[65ch]">
     <p>
-      I'm <span class="text-bigger text-primary">Todor Konjevic</span> and I'm a
-      <span class="text-bigger text-secondary">frontend developer</span>.
+      I'm <span
+        class="text-bigger text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
+        >Todor Konjevic</span>
+      and I'm a
+      <span
+        class="text-bigger text-secondary bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent"
+        >frontend developer</span
+      >.
     </p>
     <p>I love making stuff, trying new things and writing about it.</p>
     <p>
-      I'm just starting a <span class="text-accent text-bigger">digital agency</span> as well, and I'll
-      try to write about the process as much as I can.
+      I'm just starting a <span
+        class="text-accent text-bigger bg-clip-text text-transparent bg-gradient-to-r from-accent to-secondary"
+        >digital agency</span>
+      as well, and I'll try to write about the process as much as I can.
     </p>
     <p class="my-8">You can find me on:</p>
     <div class="flex gap-4 justify-center">

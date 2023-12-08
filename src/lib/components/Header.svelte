@@ -33,7 +33,9 @@
 </script>
 
 <header class="flex justify-between navbar container max-w-5xl m-auto">
-  <a href={ROUTES.HOME} class="text-4xl text-primary font-caveat tracking-tight font-bold"
+  <a
+    href={ROUTES.HOME}
+    class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-caveat tracking-tight font-bold"
     >Todor Konjevic</a>
   <div class="flex gap-6 items-center justify-center">
     <ul class="flex gap-5 font-medium">
