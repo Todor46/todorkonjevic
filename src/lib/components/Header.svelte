@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { theme } from '$lib/stores/themeStore.js';
+  import { theme, toggleTheme } from '$lib/stores/themeStore.ts';
   import { browser } from '$app/environment';
   import { fade } from 'svelte/transition';
   import { ROUTES } from '$lib/config/routes.ts';
+  import { darkTheme } from '$lib/config/themes';
 
   let icon = 'moon';
 
@@ -11,12 +12,9 @@
       window.localStorage.setItem('theme', value);
       const htmlTag = document.getElementsByTagName('html')[0];
       htmlTag.setAttribute('data-theme', value);
-      icon = value === 'dim' ? 'sun' : 'moon';
+      icon = value === darkTheme ? 'sun' : 'moon';
     }
   });
-  const toggleTheme = () => {
-    theme.update((value) => (value === 'fantasy' ? 'dim' : 'fantasy'));
-  };
 
   let navLinks = [
     {
@@ -43,11 +41,11 @@
 </script>
 
 <header class="flex justify-between navbar container max-w-5xl m-auto">
-  <div class="text-2xl font-serif tracking-tight font-bold">Todor Konjevic</div>
+  <div class="text-2xl text-primary font-serif tracking-tight font-bold">Todor Konjevic</div>
   <div class="flex gap-6 items-center justify-center">
     <ul class="flex gap-5 font-medium">
       {#each navLinks as link}
-        <li><a class="link-secondary link-hover" href={link.path}>{link.label}</a></li>
+        <li><a class="link-hover" href={link.path}>{link.label}</a></li>
       {/each}
     </ul>
     <button class="flex items-center text-lg w-8" on:click={toggleTheme}>
