@@ -1,15 +1,16 @@
 <script>
-	import Header from './Header.svelte';
-	import 'iconify-icon';
-	import '../global.css';
+  import Header from '../lib/components/Header.svelte';
+  import 'iconify-icon';
+  import '../global.css';
+  import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <div class="app">
-	<Header />
+  <Header />
 
-	<main>
-		<slot />
-	</main>
+  <main>
+    <slot />
+  </main>
 
-	<footer>footer</footer>
+  <Footer />
 </div>
