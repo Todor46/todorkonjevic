@@ -24,7 +24,8 @@ By adding the “use client” directive we make the component interactable agai
 
 There is another caveat with “use client” - by specifying a component as a Client Component, all of the children of that component will be Client Components as well meaning that we should be careful with which components we declare as Client Components to preserve the efficiency of Server Components.
 
-How to use Redux in App Router?
+## How to use Redux in App Router?
+
 The first thing that came to my mind was to specify the root Layout component as a Client Component and add our Redux Provider to it, thus every component down the tree will have access to the Redux Provider as well. But by doing this we lose the advantage of Server Components as every component down the tree will be a Client Component as well.
 While doing some research to see how others have solved this problem, I stumbled upon this article which provides us with a usable solution.
 
@@ -47,7 +48,8 @@ export default function CounterWrapper() {
 
 While this is a viable solution, it creates some extra steps that can clutter our project structure. For each component that uses Redux, we need a wrapper component and while this is not a huge hassle, there is a more elegant solution to the problem.
 
-HOC to the rescue
+## HOC to the rescue
+
 A better approach would be to create a HOC and to wrap our exported component with it which will give us access to Redux Provider in the component itself without creating extra wrappers.
 
 To create a HOC that wraps our component with Redux Provider we need to create a function that takes a component as a argument. In our HOC function, we need to create a new component in which we will wrap our argument component with Redux Provider and return the wrapped component.
@@ -88,7 +90,8 @@ export default withRedux(Counter);
 
 Don’t forget to include “use client” in your wrapped component, hooks and Redux will not be available in Server Components.
 
-Typesafe Component Props
+## Typesafe Component Props
+
 There might be a scenario where you also need to pass some props to the wrapped component. Using the approach above we don’t get any type safety by default. To do so, we need to add some typescript magic using generics and IntrinsicAttributes type to our HOC:
 
 ```tsx
@@ -111,5 +114,6 @@ export default withRedux;
 
 This is all you have to do. Now if you define some props on your wrapped component, you should get proper intellisense along with type safety when invoking your component.
 
-Conclusion
+## Conclusion
+
 We have explored different ways to infuse our applications using App Router with Redux and whether you decide to use more straight-forward wrapper or the elegant HOC solution, the goal remains the same: to empower your components with Redux while embracing the capabilities of Next.js 13. May your components be interactive, your state management robust, and your projects a testament to the synergy of Redux and Server Components. Happy coding!

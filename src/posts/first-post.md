@@ -7,7 +7,7 @@ categories:
 published: true
 ---
 
-# Testing our first post
+## Testing our first post
 
 I'm not going to write to much here because I don't want to write anything more than this.
 If you are still reading this, then you must be very bored. Go and do something else please.  

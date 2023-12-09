@@ -28,8 +28,8 @@
   </div>
 
   <!-- Post -->
-  <div class="prose font-semibold">
-    <svelte:component this={data.content} />
+  <div class="prose font-semibold prose-headings:font-titi prose-headings:text-primary">
+    <svelte:component this={data.content} class="post" />
   </div>
 </article>
 
