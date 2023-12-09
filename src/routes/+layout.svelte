@@ -5,7 +5,7 @@
   import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<div class="app bg-gradient-to-bl from-base-100 to-base-300">
+<div class="app bg-gradient-to-bl from-base-100 to-base-300 px-3">
   <Header />
 
   <main>

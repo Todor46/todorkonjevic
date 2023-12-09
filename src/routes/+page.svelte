@@ -21,7 +21,7 @@
 </svelte:head>
 
 <section
-  class="text-center flex-grow text-2xl leading-9 tracking-tight flex justify-center items-center">
+  class="sm:text-center flex-grow text-xl sm:text-2xl p-4 leading-7 sm:leading-9 tracking-tight flex justify-center items-center">
   <div class="max-w-[65ch]">
     <p>
       I'm <span
@@ -41,7 +41,7 @@
       as well, and I'll try to write about the process as much as I can.
     </p>
     <p class="my-8">You can find me on:</p>
-    <div class="flex gap-4 justify-center">
+    <div class="flex gap-4 sm:justify-center">
       {#each socialLinks as link}
         <a href={link.url} target="_blank"><iconify-icon icon={link.icon}></iconify-icon></a>
       {/each}
