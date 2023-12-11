@@ -25,10 +25,6 @@
       label: 'Blog',
       path: ROUTES.BLOG,
     },
-    {
-      label: 'Contact',
-      path: ROUTES.CONTACT,
-    },
   ];
 </script>
 
