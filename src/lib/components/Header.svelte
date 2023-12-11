@@ -6,6 +6,7 @@
   import { darkTheme } from '$lib/config/themes';
 
   let icon = 'moon';
+  let darkThemeEnabled = true;
 
   theme.subscribe((value) => {
     if (browser) {
@@ -13,6 +14,7 @@
       const htmlTag = document.getElementsByTagName('html')[0];
       htmlTag.setAttribute('data-theme', value);
       icon = value === darkTheme ? 'sun' : 'moon';
+      darkThemeEnabled = value === darkTheme ? true : false;
     }
   });
 
@@ -42,6 +44,15 @@
       <div class="drawer-side">
         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
         <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content text-3xl">
+          <div class="flex text-base items-center gap-2">
+            <iconify-icon in:fade icon={`quill:sun`}></iconify-icon>
+            <input
+              type="checkbox"
+              class="toggle"
+              checked={darkThemeEnabled}
+              on:click={toggleTheme} />
+            <iconify-icon in:fade icon={`quill:moon`}></iconify-icon>
+          </div>
           <li class="flex-grow bg-transparent"></li>
           <li><a class="link-hover" href={ROUTES.HOME}>Home</a></li>
           {#each navLinks as link}
@@ -101,5 +112,12 @@
   }
   .burger:checked {
     @apply delay-0;
+  }
+  /* Override defaults for consistency across themes */
+  .toggle {
+    border-radius: 1.9rem;
+    transition:
+      background,
+      box-shadow 0.2s ease-out;
   }
 </style>
